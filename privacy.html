@@ -86,9 +86,9 @@
 </li><li><strong>Sign-in information:</strong> your email address and, if you use Sign in with Apple, your Apple sign-in identifier and the email Apple shares (which may be a private relay address). If you sign in with an email and password, our authentication provider stores the password only in hashed form.
 </li><li><strong>Verification information:</strong> before a Lamplight member can view profiles or start waves, our verification provider, Stripe, collects an image of the member's government-issued ID and a live selfie to confirm the member is 18 or older and that the selfie matches the ID. This may involve creating a face scan or face template to compare the selfie with the ID photo. Free (Glow) members are not asked to verify. See "Verification and biometric information" below.
 </li><li><strong>Communications and activity:</strong> waves you send and receive, matches, chat messages (text only), and the content of anything you send us (for example, support requests).
-</li><li><strong>Reports and blocks:</strong> if you report or block someone, or someone reports or blocks you, we keep a record of the report or block and any information provided with it.
+</li><li><strong>Reports and blocks:</strong> if you report or block someone, or someone reports or blocks you, we keep a record of the report or block and any information provided with it. Reports, and blocks against a person, stay after an account is deleted, as described in "How long we keep your information."
 </li><li><strong>Apple offer codes:</strong> if you redeem an Apple offer code, Apple handles the redemption through the App Store. We learn only that you have Lamplight access, the same as for any other purchase.
-</li><li><strong>Settings:</strong> your glow duration. Your Discreet Mode, notification, and appearance choices are saved only on your iPhone.
+</li><li><strong>Settings:</strong> your glow duration and whether Discreet Mode is on. Your notification and appearance choices are saved only on your iPhone.
 </li></ul>
 <h3 id="information-collected-automatically"><a class="anchor" href="#information-collected-automatically">Information collected automatically</a></h3>
 <ul>
@@ -110,7 +110,7 @@
 </li><li><strong>Verify age and identity:</strong> confirm that Lamplight members are 18 or older and that their selfie matches their ID.
 </li><li><strong>Keep people safe:</strong> moderate names, bios, chat messages, and photos (using automated screening tools, plus human review of user reports), enforce our rules—including our ban on photos of children—investigate reports, prevent fraud, spam, and fake accounts, and respond to emergencies.
 </li><li><strong>Process purchases:</strong> unlock Lamplight subscription features, Flares, and Game Day Passes based on purchase status from Apple.
-</li><li><strong>Communicate with you:</strong> send service messages, safety notices, and (if you allow them) push notifications when someone waves at you or sends you a message. A message notification shows the sender's first name and the start of the message.
+</li><li><strong>Communicate with you:</strong> send service messages, safety notices, and (if you allow them) push notifications when someone waves at you or sends you a message. Normally, a wave notification shows the person's first name, and a message notification shows the sender's first name and the start of the message. With Discreet Mode on, notifications say only "New wave" or "New message."
 </li><li><strong>Improve the Service:</strong> understand how the app is used, fix bugs, and develop features. Where practical, we use aggregated or de-identified data for this.
 </li><li><strong>Comply with law:</strong> meet legal obligations, respond to lawful requests, and enforce our Terms.
 </li></ul>
@@ -131,8 +131,8 @@
 <ul>
 <li>Stripe may extract information from your ID (such as your name, date of birth, and ID number) and may create a face template from your selfie to compare it against your ID photo.
 </li><li><strong>We use this information only for age verification, identity and photo verification, fraud prevention, and safety.</strong> We do not sell it or use it for advertising.
-</li><li>Hereglow stores only whether you passed, the date you were verified, and Stripe's reference number for the verification. We do not store your ID images, your selfie, any face template, or the date of birth from your ID. Stripe keeps verification data under its own privacy policy.
-</li><li>Biometric data (face templates) is held only by Stripe, not by Hereglow. Stripe states that it keeps biometric data no longer than 1 year.
+</li><li>Hereglow stores only whether you passed, the date you were verified, and Stripe's reference number for the verification. We do not store your ID images, your selfie, any face template, or the date of birth from your ID. Once a check finishes, whether it passes or needs to be redone, we ask Stripe to delete the ID images, selfie, and information read from your ID; Stripe says this can take up to 4 days. If you start a new check, we also ask Stripe to delete any earlier unfinished check, and when you delete your account, we ask Stripe to delete your most recent check.
+</li><li>Biometric data (face templates) is held only by Stripe, not by Hereglow, and is deleted with the rest of the check as described above. In the rare case that Stripe confirms a check but we can't read the date of birth from it, we leave that check at Stripe until you start a new check or delete your account.
 </li><li><strong>By completing verification, you consent to the collection and use of your verification and biometric information as described here.</strong> 
 </li></ul>
 <h2 id="what-other-users-can-see"><a class="anchor" href="#what-other-users-can-see">5. What other users can see</a></h2>
@@ -142,7 +142,7 @@
 </li><li><strong>Photos:</strong> other people see only photos that pass our automated check. While a photo is being checked, only you can see it, marked "In review." Before upload, the app resizes each photo and removes the location stored in the picture.
 </li><li>If a Lamplight member waves at you, you can open their profile and wave back for free. If you both wave, it's a match and you can chat.
 </li><li>Once you match, you and your match can keep seeing each other's profile and photos in your chat, even after either of you leaves the venue, until one of you blocks the other or deletes their account.
-</li><li><strong>Discreet Mode:</strong> hides message previews and in-app banners inside Hereglow. It does not change the app's icon or name on your home screen, and it does not control lock-screen notifications; you can manage those in iPhone Settings &gt; Notifications &gt; Hereglow.
+</li><li><strong>Discreet Mode:</strong> when it's on, Hereglow's push notifications say only "New wave" or "New message," with no name or message text, and the app hides chat previews and match pop-ups. It does not change the app's icon or name on your home screen. You can also turn notifications off or hide previews in iPhone Settings &gt; Notifications &gt; Hereglow.
 </li><li>Anything you put in your profile, or send to another user, can be seen, saved, screenshotted, or shared by that user. Please share thoughtfully.
 </li></ul>
 <h2 id="how-we-share-information"><a class="anchor" href="#how-we-share-information">6. How we share information</a></h2>
@@ -172,20 +172,20 @@
 <tbody>
 <tr><td>Raw precise location (GPS coordinates)</td><td>Not stored. Used only for the venue check, then discarded.</td></tr>
 <tr><td>Glow and venue association</td><td>Only while your glow is on; deleted when it turns off or expires</td></tr>
-<tr><td>ID images and selfie / face template</td><td>Held by Stripe, not Hereglow, under Stripe's privacy policy. Stripe states it keeps biometric data no longer than 1 year.</td></tr>
+<tr><td>ID images and selfie / face template</td><td>Held by Stripe, not Hereglow. We ask Stripe to delete them once each check finishes (Stripe says up to 4 days), and when you start a new check or delete your account. See Section 4 for one rare exception.</td></tr>
 <tr><td>Verification result and date (we do not store the date of birth from your ID)</td><td>Life of the account; deleted when you delete your account</td></tr>
 <tr><td>Profile, photos, waves, matches, chat messages</td><td>Life of the account; deleted from our live systems when you delete your account. Photos you remove, and photos that fail our check, are deleted right away.</td></tr>
-<tr><td>Reports, blocks, and moderation records</td><td>Until the reporting or the reported person deletes their account</td></tr>
+<tr><td>Reports, blocks, and moderation records</td><td>As long as needed for safety and legal reasons, including after either person deletes their account. After an account is deleted, its records keep only a one-way fingerprint of its sign-in, not the person's name, email address, photos, or messages. Only Hereglow staff can see the records kept after deletion, and other users never see reports or blocks about them.</td></tr>
 <tr><td>Purchase status</td><td>Life of the account (Apple keeps your purchase records)</td></tr>
 <tr><td>Push tokens and server logs</td><td>Push tokens: until you sign out or delete your account. Server logs (IP address and request details): kept by Supabase for a limited time under its log retention schedule, no more than 90 days.</td></tr>
 <tr><td>Backups</td><td>Overwritten within 1 year</td></tr>
 </tbody></table></div>
-<p>We may keep information longer if required by law, to resolve disputes, or where it relates to a safety report or legal matter. If we ban an account for serious violations, we may keep limited information (such as a verification hash or device identifier) to prevent that person from creating new accounts. </p>
+<p>We may keep information longer if required by law, to resolve disputes, or where it relates to a safety report or legal matter. When an account is deleted, we keep reports involving it, and blocks other people made against it, with a one-way fingerprint of the Apple ID or email address used to sign in instead of the account itself. The fingerprint can't be turned back into the email address or Apple ID. If the same Apple ID or email address is used to sign up again, earlier blocks against it apply again automatically, and our staff can see earlier reports.</p>
 <h2 id="deleting-your-account"><a class="anchor" href="#deleting-your-account">8. Deleting your account</a></h2>
 <p>You can delete your account at any time inside the app at You &gt; Account &gt; Delete account. When you delete your account:</p>
 <ul>
 <li>Your profile and glow are removed from the Service right away.
-</li><li>Your profile, photos (including blurred copies), waves, matches, chats, reports and blocks you made or received, push tokens, and sign-in account are deleted from our live systems right away. Backup copies are overwritten on the schedule above.
+</li><li>Your profile, photos (including blurred copies), waves, matches, chats, blocks you made, push tokens, and sign-in account are deleted from our live systems right away. Reports you made or received, and blocks other people made against you, are kept as described in "How long we keep your information," with only a one-way fingerprint of your sign-in instead of your account. We also ask Stripe to delete your most recent ID check. Backup copies are overwritten on the schedule above.
 </li><li>Your chats are deleted for both people, so your matches will no longer see your messages.
 </li><li><strong>Deleting your account does not cancel your Apple subscription.</strong> Cancel it in your Apple ID settings (iPhone Settings &gt; [your name] &gt; Subscriptions) to stop future charges.
 </li></ul>
