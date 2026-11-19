@@ -53,8 +53,8 @@
 <ul>
 <li>Hereglow is for adults 18 and older only. Everyone must give a date of birth showing they are 18 or older. Lamplight (paid) members must also pass an ID and selfie check before they can view profiles or start waves.
 </li><li>When you choose to "turn on your glow," other Hereglow users whose glow is on within about 250 meters of you can see that you're single. Your glow turns off automatically after the time you choose (default 3 hours, adjustable from 1 to 6 hours).
-</li><li>We use your device's location only while the app is open, to find other people whose glow is on within about 250 meters of you. We never show other users your exact location, how far away you are, or which direction you are in.
-</li><li>We don't keep a history of your location. While your glow is on, our server keeps only your latest position (which may be rounded), and it deletes that position when your glow turns off or expires.
+</li><li>We use your device's location only while your glow is on, to find other people whose glow is on within about 250 meters of you. While your glow is off, Hereglow doesn't send or store your location. We never show other users your exact location, how far away you are, or which direction you are in.
+</li><li>We don't keep a history of your location. While your glow is on, our server keeps two points for you, where you turned your glow on and your most recent position, both rounded to about 30 meters. Both are deleted as soon as your glow ends.
 </li><li><strong>We do not sell your personal information.</strong> We do not share it for cross-context behavioral advertising. 
 </li><li>You can delete your account at any time from inside the app.
 </li></ul>
@@ -65,7 +65,7 @@
 <tbody>
 <tr><td>Contact Info — Name</td><td>First name</td><td>App Functionality</td><td>Yes</td><td>No</td></tr>
 <tr><td>Contact Info — Email Address</td><td>Email address used to sign in (email link or password sign-in), or the email Apple shares with Sign in with Apple (which may be a private relay address). We do not collect phone numbers.</td><td>App Functionality; Customer Support</td><td>Yes</td><td>No</td></tr>
-<tr><td>Location — Precise Location</td><td>GPS coordinates while the app is open, used to find people glowing within about 250 meters of you. While your glow is on, our server keeps only your latest position (which may be rounded); it is deleted when your glow turns off or expires</td><td>App Functionality</td><td>Yes</td><td>No</td></tr>
+<tr><td>Location — Precise Location</td><td>GPS position while your glow is on, used to find people glowing within about 250 meters of you. Our server keeps only where you turned your glow on and your most recent position, both rounded to about 30 meters; both are deleted as soon as your glow ends. Not sent or stored while your glow is off</td><td>App Functionality</td><td>Yes</td><td>No</td></tr>
 <tr><td>Sensitive Info</td><td>ID and selfie verification data for Lamplight members, collected by Stripe through its SDK in our app, which may include face geometry / biometric data used to match the selfie to the ID. Hereglow itself stores only the result, the date, and Stripe's reference number.</td><td>App Functionality (verification, safety)</td><td>Yes</td><td>No</td></tr>
 <tr><td>User Content — Photos or Videos</td><td>Profile photos (up to 6). Chat is text only; photos cannot be sent in chat.</td><td>App Functionality</td><td>Yes</td><td>No</td></tr>
 <tr><td>User Content — Emails or Text Messages</td><td>In-app chat messages (text only)</td><td>App Functionality</td><td>Yes</td><td>No</td></tr>
@@ -91,7 +91,7 @@
 </li></ul>
 <h3 id="information-collected-automatically"><a class="anchor" href="#information-collected-automatically">Information collected automatically</a></h3>
 <ul>
-<li><strong>Location:</strong> with your permission, we use your device's GPS location while the app is open to find other people whose glow is on within about 250 meters of you. See "Location: how it works" below.
+<li><strong>Location:</strong> with your permission, we use your device's GPS location while your glow is on to find other people whose glow is on within about 250 meters of you. See "Location: how it works" below.
 </li><li><strong>Device information:</strong> your push notification token, if you allow notifications. When the app connects to our servers, our hosting provider (Supabase) automatically logs your IP address and basic request details (such as the app and iOS version the request came from) for security and troubleshooting.
 </li><li><strong>Usage and diagnostics:</strong> we do not use third-party analytics, advertising, or crash-reporting tools in the app. Our servers record the actions the Service needs in order to work, such as waves, matches, and messages. If you choose to share analytics with app developers in your iPhone settings, Apple may share crash reports and aggregated app statistics with us.
 </li></ul>
@@ -116,13 +116,13 @@
 <h2 id="location-how-it-works"><a class="anchor" href="#location-how-it-works">3. Location: how it works</a></h2>
 <p>Location is central to Hereglow, so we want to be specific.</p>
 <ul>
-<li><strong>When we collect it:</strong> only while the app is open and in use, and only if you grant iOS location permission. Hereglow does not request "Always" location access and does not track your location in the background. 
-</li><li><strong>What we do with it:</strong> our server compares your device's GPS position with the latest positions of other people whose glow is on, to find those within about 250 meters of you.
+<li><strong>When we collect it:</strong> only while your glow is on (starting when you turn it on) and the app is open and in use, and only if you grant iOS location permission. While your glow is off, Hereglow doesn't send or store your location. Hereglow does not request "Always" location access and does not track your location in the background. 
+</li><li><strong>What we do with it:</strong> our server compares your rounded position with the rounded positions of other people whose glow is on, to find those within about 250 meters of you.
 </li><li><strong>What other users see:</strong> only that your glow is on <strong>within about 250 meters of them</strong>. Other users <strong>never</strong> see your exact location, a map pin, your distance or direction from them, or your location history.
 </li><li><strong>Fixed 250-meter radius:</strong> your glow is visible only to other users whose glow is on within about 250 meters of you, and you see only them. The radius is the same for everyone and can't be changed.
 </li><li><strong>Auto-expiry:</strong> your glow turns off automatically after the period you choose (3 hours by default; you can choose 1 to 6 hours). It also turns off if the app sees that you've moved well away (about 250 meters) from where you turned it on. You can turn it off sooner at any time.
-</li><li><strong>Retention:</strong> your phone sends its GPS position to our server when you turn on your glow and while the app is open and your glow is on. While your glow is on, the server keeps only your latest position (which may be rounded), replacing it each time. That position, and the record of when your glow started and ends, are deleted as soon as your glow turns off or expires. We don't keep a history of where you've been.
-</li><li><strong>Turning it off:</strong> you can turn off location access at any time in your iPhone Settings. Without location access, you won't be able to turn on your glow.
+</li><li><strong>Retention:</strong> while your glow is on, Hereglow's server keeps two points for you: where you turned your glow on and your most recent position, both rounded to about 30 meters. Each new position replaces the previous one, so there's no location history. Both points are deleted as soon as your glow ends, whether you turn it off, the 1–6 hour timer runs out, you move more than about 250 meters from where you turned it on, you sign out, your account is hidden after reports, or you delete your account. No other user can read these points; others only learn that you're glowing within about 250 meters of them. The record of when your glow started and ends is deleted at the same time.
+</li><li><strong>Turning it off:</strong> the app asks for Precise Location once, and your glow won't turn on without it. You can turn off location access, or Precise Location, at any time in your iPhone Settings. Without it, you won't be able to turn on your glow.
 </li></ul>
 <p>Where you turn on your glow—for example, at a church—could reveal sensitive information about you (such as religious affiliation). We do not keep a history of where you've turned on your glow, we do not use your location to build profiles of your beliefs, interests, or habits, and we do not use it for advertising. </p>
 <h2 id="verification-and-biometric-information"><a class="anchor" href="#verification-and-biometric-information">4. Verification and biometric information</a></h2>
@@ -169,8 +169,8 @@
 <div class="table-scroll" tabindex="0" role="region" aria-label="Table"><table>
 <thead><tr><th scope="col"><strong>Data</strong></th><th scope="col"><strong>Retention</strong></th></tr></thead>
 <tbody>
-<tr><td>Precise location (GPS coordinates)</td><td>Only your latest position (which may be rounded), and only while your glow is on; deleted when your glow turns off or expires. We do not keep a location history.</td></tr>
-<tr><td>Glow status (when it started and ends)</td><td>Only while your glow is on; deleted when it turns off or expires</td></tr>
+<tr><td>Precise location (GPS coordinates)</td><td>Two points while your glow is on: where you turned it on and your most recent position, both rounded to about 30 meters. Each new position replaces the previous one, so there's no location history. Both are deleted as soon as your glow ends (turned off, timer ended, moved more than about 250 meters away, signed out, account hidden after reports, or account deleted).</td></tr>
+<tr><td>Glow status (when it started and ends)</td><td>Only while your glow is on; deleted when it ends, at the same time as your location points</td></tr>
 <tr><td>ID images and selfie / face template</td><td>Held by Stripe, not Hereglow. We ask Stripe to delete them once each check finishes (Stripe says up to 4 days), and when you start a new check or delete your account. See Section 4 for one rare exception.</td></tr>
 <tr><td>Verification result and date (we do not store the date of birth from your ID)</td><td>Life of the account; deleted when you delete your account</td></tr>
 <tr><td>Profile, photos, waves, matches, chat messages</td><td>Life of the account; deleted from our live systems when you delete your account. Photos you remove, and photos that fail our check, are deleted right away.</td></tr>
