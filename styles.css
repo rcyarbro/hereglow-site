@@ -93,3 +93,17 @@ th{background:#efe8da;font-weight:700}
   .hero-grid{grid-template-columns:1.15fr .85fr}
   .features{grid-template-columns:repeat(4,1fr)}
 }
+
+/* legal pages */
+.legal .crumb{font-size:.92rem;margin:0 0 1.5rem}
+.legal .crumb.end{margin:3rem 0 0;padding-top:1.25rem;border-top:1px solid #e3dccd}
+.legal h2 .anchor,.legal h3 .anchor{color:inherit;text-decoration:none}
+.legal h2 .anchor:hover::after,.legal h3 .anchor:hover::after{content:" #";color:var(--violet)}
+.legal h2,.legal h3{scroll-margin-top:1rem}
+.legal ul ul{margin:.35rem 0}
+.legal p,.legal li{overflow-wrap:anywhere}
+.toc{background:var(--paper);border:1px solid #e3dccd;border-radius:12px;padding:1rem 1.25rem;margin:1.5rem 0}
+.toc-h{font-family:var(--mono);font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink2);margin:0 0 .5rem}
+.toc ul{margin:0;padding:0;list-style:none;columns:1}
+.toc li{margin:.2rem 0}
+@media (min-width:720px){.toc ul{columns:2;column-gap:2rem}}
