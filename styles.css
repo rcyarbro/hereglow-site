@@ -108,5 +108,3 @@ th{background:#efe8da;font-weight:700}
 .toc li{margin:.2rem 0}
 @media (min-width:720px){.toc ul{columns:2;column-gap:2rem}}
 
-/* Removable: only used on unpublished legal drafts. Delete when these pages go live. */
-.draft-notice{background:#fff3d6;border:1px solid #e0b35c;color:#2A1E0B;padding:.9rem 1rem;border-radius:12px;margin:1rem 0 1.5rem}
